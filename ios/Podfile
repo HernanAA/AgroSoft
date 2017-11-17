@@ -1,0 +1,5 @@
+
+
+target AgroSoft do
+  pod 'GoogleMaps' 
+end

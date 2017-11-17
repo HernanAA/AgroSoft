@@ -1,0 +1,30 @@
+gradlew assembleRelease
+jarsigner -verbose -keystore "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\my-keystore.keystore" "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\app\build\outputs\apk\app-release-unsigned.apk"  agrosoft
+zipalign -f -v 4 "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\app\build\outputs\apk\app-release-unsigned.apk" "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\app\build\outputs\apk\app-aligned.apk"
+
+generar icono: en carpeta de la app ejecutar "app-icon generate"
+
+keytool -genkey -v -keystore my-keystore.keystore -alias agrosoft -keyalg RSA -validity 10000
+Enter keystore password:
+Re-enter new password:
+What is your first and last name?
+  [Unknown]:  Hernan Albertario
+What is the name of your organizational unit?
+  [Unknown]:  Titi
+What is the name of your organization?
+  [Unknown]:  Titi
+What is the name of your City or Locality?
+  [Unknown]:  CABA
+What is the name of your State or Province?
+  [Unknown]:  CABA
+What is the two-letter country code for this unit?
+  [Unknown]:  AR
+Is CN=Hernan Albertario, OU=Titi, O=Titi, L=CABA, ST=CABA, C=AR correct?
+  [no]:  yes
+
+Generating 2.048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10.000 days
+        for: CN=Hernan Albertario, OU=Titi, O=Titi, L=CABA, ST=CABA, C=AR
+Enter key password for <agrosoft>
+        (RETURN if same as keystore password):
+[Storing my-keystore.keystore]
+
