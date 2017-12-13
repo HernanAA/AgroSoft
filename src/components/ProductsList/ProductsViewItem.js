@@ -5,22 +5,51 @@ import Utils from '../../helpers/utils';
 import { Stars } from '../common';
 
 const ProductsViewItem = ({ item }) => {
-    // <Image source={{ uri: 'http://www.agrosoft.com.ar/modulos/producto/10385.png' }} 
+    // <Image source={{ uri: 'http://www.ruelo.com.ar/modulos/producto/10385.png' }} 
     // style={styles.image} />
+
+    //<Image source={{ uri: "http://" + item.urlImage }} style={styles.image} />
     return (
         <View key={item.Id} style={styles.container}>
             <View style={styles.imageContainer}>
-                <Image source={{ uri: "http://" + item.urlImage }} style={styles.image} />
+                <Image source={{ uri: 'http://estaticos01.elmundo.es/elmundo/imagenes/2009/04/23/1240508553_0.jpg' }}
+                    style={styles.image} />
             </View >
 
-            <View style={styles.bottomContainer}>
+            <View style={styles.detailContainer}>
                 <View style={styles.line}>
-                    <Text style={styles.productName} numberOfLines={2} ellipsizeMode ={'tail'}>{item.Descripcion} </Text>
+                    <Text style={styles.caravana} ellipsizeMode={'tail'}>A024-501</Text>
                 </View>
                 <View style={styles.line}>
-                    <View style={styles.internalCode}>
-                        <Text style={styles.internalCodeText}>Codigo interno {item.Id}</Text>
-                    </View>
+                    <Text style={styles.segundaCaravana}>BLANCA-062</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Tipo:</Text>
+                    <Text style={styles.campoTexto}>Vaquillona</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Pelaje:</Text>
+                    <Text style={styles.campoTexto}>Pampa Colorado</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Madre:</Text>
+                    <Text style={styles.campoTexto}>A024-501</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Padre:</Text>
+                    <Text style={styles.campoTexto}>Inseminado</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Campo:</Text>
+                    <Text style={styles.campoTexto}>Feedlot</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Destino:</Text>
+                    <Text style={styles.campoTexto}>Feedlot</Text>
+                </View >
+                <View style={[styles.line]}>
+                    <Text style={styles.campoTitulo}>Estado:</Text>
+                    <Text style={styles.campoTexto}>Activa</Text>
                 </View >
             </View>
         </View >
@@ -29,16 +58,16 @@ const ProductsViewItem = ({ item }) => {
 
 const styles = {
     container: {
-        height: 240,
+        height: 200,
         marginBottom: 10,
-        flexDirection: 'column',
+        flexDirection: 'row',
         backgroundColor: Styles.colors.white,
         borderColor: Styles.colors.lighterGray,
         borderWidth: 1,
         elevation: 2,
         flex: 1,
         margin: 5,
-        maxWidth: Utils.getWindowDimensions().width / 3,
+        maxWidth: Utils.getWindowDimensions().width,
     },
     imageContainer: {
         flex: 4,
@@ -50,35 +79,34 @@ const styles = {
         flex: 1,
         resizeMode: 'cover',
     },
-    bottomContainer: {
+    detailContainer: {
         flex: 1.5,
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        //justifyContent: 'space-between',
         paddingHorizontal: 10,
-        paddingVertical: 5,
+        //paddingVertical: 5,
     },
     line: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingTop: 3,
     },
-    priceText: {
-        alignSelf: 'flex-end',
-        fontSize: 9,
-        color: Styles.colors.lighterGray,
-    },
-    productName: {
+    caravana: {
         fontSize: 14,
         color: Styles.colors.black,
         fontWeight: '500',
     },
-    internalCode: {
-        flexDirection: 'row',
-        alignItems: 'flex-start'
+    segundaCaravana: {
+        fontSize: 12,
+        color: Styles.colors.black,
+        marginBottom: 5,
     },
-    internalCodeText: {
-        fontSize: 13,
-        fontWeight: '500'
+    campoTitulo: {
+        fontSize: 12,
+        color: Styles.colors.black,
+    },
+    campoTexto: {
+        fontSize: 12,
+        color: Styles.colors.darkGray,
     },
 }
 

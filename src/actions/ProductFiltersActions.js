@@ -23,7 +23,7 @@ import {
 } from './types';
 
 const makeFilteredUrl = (filter) => {
-        //"http://www.agrosoft.com.ar/api/api/producto/0?Id=10048&Descripcion=0&Codigo=0&IdMarca=0&IdRubro=0&IdSubrubro=0",
+        //"http://www.ruelo.com.ar/api/api/producto/0?Id=10048&Descripcion=0&Codigo=0&IdMarca=0&IdRubro=0&IdSubrubro=0",
         var url = api.getFilterProductListlUrl();
         const filterId = api.getFilterId() + "0";
         url = url + filterId;

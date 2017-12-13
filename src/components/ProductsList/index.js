@@ -9,9 +9,9 @@ class ProductList extends Component {
 
     componentWillMount() {
         this.props.productListFetch();
-        // this.props.brandListFetch();
-        // this.props.categoryListFetch();
-        // this.props.subcategoryListFetch();
+        this.props.brandListFetch();
+        this.props.categoryListFetch();
+        this.props.subcategoryListFetch();
     }
 
     render() {

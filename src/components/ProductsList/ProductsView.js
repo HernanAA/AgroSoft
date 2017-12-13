@@ -20,7 +20,6 @@ class ProductsView extends Component {
     }
 
     onSearchChanged(text) {
-        //text = 'cereal fort manz'
         this.props.searchChanged({ text });
     }
 
@@ -41,7 +40,7 @@ class ProductsView extends Component {
                 <View style={styles.screen}>
                     {title}
                     <View style={styles.errorContainer}>
-                        <Text style={{marginHorizontal: 20}}> {this.props.error} </Text>
+                        <Text style={{ marginHorizontal: 20 }}> {this.props.error} </Text>
                     </View>
                 </View>
             )
@@ -57,13 +56,18 @@ class ProductsView extends Component {
                             style={{ flexDirection: 'column' }}
                             data={this.props.filterdList}
                             keyExtractor={(item, index) => item.Id}
-                            numColumns={3}
+                            //numColumns={3}
                             renderItem={this.renderItem.bind(this)}
                         />
                     </View>
-                    <Text style={styles.quantityText}>
-                        {"Se encontraron " + this.props.filterdList.length + " productos."}
+                    <View style={styles.bottom}>
+                        <Text style={styles.quantityText}>
+                            {this.props.filterdList.length + " productos listados."}
+                        </Text>
+                        <Text style={styles.developedBy}>
+                            Desarrollado por Hernán Albertario
                     </Text>
+                    </View>
                 </View>
 
 
@@ -91,15 +95,26 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center'
     },
-    quantityText: {
-        flex: 1,
+    bottom: {
+        flex: 1,        
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         backgroundColor: Styles.colors.lightestGray,
         position: 'absolute',
         bottom: 0,
-        left: 10,
-        right: 10,
+        left:0,
+        right:0,
+    },
+    quantityText: {
         fontSize: 14,
         color: Styles.colors.black,
-        paddingHorizontal: 10,
+        paddingLeft: 10,
+    },
+
+    developedBy: {
+        fontSize: 14,
+        color: Styles.colors.black,
+        fontWeight: '500',
+        paddingRight: 10,
     },
 }
