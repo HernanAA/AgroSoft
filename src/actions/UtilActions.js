@@ -11,6 +11,7 @@ export const genericListFetch = (_type, typeSuccess, typeFail, url, errorText) =
         })
             .then((response) => response.json())
             .then((rjson) => {
+                console.log(JSON.stringify(rjson, null, 4))
                 if (rjson !== null) {
                     dispatch({ type: typeSuccess, payload: { list: rjson } });
                 }
