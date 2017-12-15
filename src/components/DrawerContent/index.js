@@ -13,7 +13,7 @@ import { filteredProductListFetch } from '../../actions/ProductFiltersActions';
 import Utils from '../../helpers/utils'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Styles from '../../styles'
-import { Actions } from 'react-native-router-flux';
+//import { Actions } from 'react-native-router-flux';
 import DrawerView from './DrawerView'
 
 class DrawerContent extends Component {

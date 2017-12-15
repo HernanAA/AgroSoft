@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, TouchableOpacity, FlatList, Text, ListView, StyleSheet } from 'react-native'
-import { Actions } from 'react-native-router-flux';
+//import { Actions } from 'react-native-router-flux';
 import Styles from '../../styles'
 import { ProductsViewItem } from './ProductsViewItem'
 import { ProductsSearch } from './ProductsSearch'
@@ -10,7 +10,7 @@ class ProductsView extends Component {
 
     onProductPress(item) {
         this.props.productFetch(item.Id);
-        Actions.product();
+        //Actions.product();
     }
 
     renderItem({ item }) {

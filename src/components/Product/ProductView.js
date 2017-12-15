@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, FlatList, Text, ScrollView } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Actions } from 'react-native-router-flux';
+//import { Actions } from 'react-native-router-flux';
 import Utils from '../../helpers/utils';
 import Styles from '../../styles'
 import { ProductViewItem } from './ProductViewItem'
@@ -12,7 +12,7 @@ class ProductView extends Component {
 
     onProductPress(item) {
         this.props.productSelect(item);
-        Actions.product();
+        //Actions.product();
     }
 
     renderItem({ item }) {

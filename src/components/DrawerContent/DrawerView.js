@@ -10,7 +10,7 @@ import Utils from '../../helpers/utils'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import IconIonic from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
-import { Actions } from 'react-native-router-flux';
+//import { Actions } from 'react-native-router-flux';
 import Styles from '../../styles'
 import { Multiselect, InputWithIcon } from '../common';
 import { Spinner } from '../common';
@@ -83,7 +83,7 @@ export default class DrawerView extends Component {
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}
             onPress={() => {
-              Actions.drawerClose()
+              //Actions.drawerClose()
               this.props.filteredProductListFetch()
             }}
           >

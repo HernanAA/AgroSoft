@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import Styles from '../../styles'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Actions } from 'react-native-router-flux';
+//import { Actions } from 'react-native-router-flux';
 
 const Header = (props) => {
   const { textStyle, container } = styles;
@@ -12,7 +12,7 @@ const Header = (props) => {
       <TouchableOpacity
         style={styles.navBarLeftButton}
         activeOpacity={0.2}
-        onPress={() => { Actions.drawerOpen() }}>
+  onPress={() => { /*Actions.drawerOpen()*/ }}>
         <Icon name='reorder' size={25} color={Styles.colors.lighterBlue} style={{marginTop:2}}/>
       </TouchableOpacity>
       <Text style={textStyle}>{props.headerText}</Text>
