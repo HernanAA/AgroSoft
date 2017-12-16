@@ -24,6 +24,13 @@ const rjson = [
         "peso": "400",
         "valorIngreso": "5000",
         "valorEgreso": "11000",
+        "fechaIngreso": "01-12-2017",
+        "fechaEgreso": "01-12-2018",
+        "nacida": false, //Si nacio en el campo o fue comprada afuera
+        "arregloEconomico": {
+            "id": "4",
+            "valor": "50" //50% de la ganacia para anibal 
+        },
         "tipo": {
             "id": "4",
             "valor": "Vaquilla"

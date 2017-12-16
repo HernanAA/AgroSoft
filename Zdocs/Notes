@@ -1,3 +1,17 @@
+Guiarme usando las dos planillas de excel: la de siempre mas la nueva de ingresos-egresos
+Rentabilidad:
+Se debe calcular dentro de un rango de fecha. Deberia tomar solo los animales q ingresaraon y egresaron en ese rango,
+dando la posibilidad de no realizar dicho control. 
+Ademas se debe guardar el acuerdo realizado con Anibal (Se queda el 50% de ganacias?)
+
+en $ por cada animal: Valor egreso - valor ingreso
+Se deberia hacer otro reporte que muestre a lo largo del tiempo como se van moviendo los ingresos y egresos de $ a lo largo del tiempo
+
+Se deben guardar los eventos que ocurren:
+Ppalmente los ingresos y egresos con sus respectivos valores y pesos.
+Ademas, los pesajes etc.
+
+
 gradlew assembleRelease
 jarsigner -verbose -keystore "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\my-keystore.keystore" "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\app\build\outputs\apk\app-release-unsigned.apk"  agrosoft
 zipalign -f -v 4 "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\app\build\outputs\apk\app-release-unsigned.apk" "C:\Users\herna\Documents\Rect Proyects\AgroSoft\android\app\build\outputs\apk\app-aligned.apk"

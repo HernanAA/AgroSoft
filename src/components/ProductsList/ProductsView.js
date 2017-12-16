@@ -24,12 +24,12 @@ class ProductsView extends Component {
     }
 
     render() {
-        const title = <Header headerText={"Lista de productos"} />;
+        //const title = <Header headerText={"Lista de productos"} />;
 
         if (this.props.listFetching) {
             return (
                 <View style={styles.screen}>
-                    {title}
+                    
                     <Spinner size="small" />
                 </View>
             )
@@ -38,7 +38,7 @@ class ProductsView extends Component {
         if (this.props.error !== '') {
             return (
                 <View style={styles.screen}>
-                    {title}
+                 
                     <View style={styles.errorContainer}>
                         <Text style={{ marginHorizontal: 20 }}> {this.props.error} </Text>
                     </View>
@@ -48,7 +48,6 @@ class ProductsView extends Component {
 
         return (
             <View style={styles.screen}>
-                {title}
                 <View style={styles.container}>
                     <ProductsSearch onSearchChanged={this.onSearchChanged.bind(this)} />
                     <View style={styles.listContainer}>

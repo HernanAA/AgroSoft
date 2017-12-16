@@ -9,15 +9,15 @@ import { registerScreens } from './Screens';
 import { Navigation } from 'react-native-navigation';
 
 const navigatorStyle = {
-	statusBarColor: 'black',
-	statusBarTextColorScheme: 'light',
-	navigationBarColor: 'black',
-	navBarBackgroundColor: '#0a0a0a',
-	navBarTextColor: 'white',
-	navBarButtonColor: 'white',
+	statusBarColor: 'white',
+	statusBarTextColorScheme: 'dark',
+	navigationBarColor: 'white',
+	navBarBackgroundColor: 'dark',
+	navBarTextColor: 'black',
+	navBarButtonColor: 'black',
 	tabBarButtonColor: 'red',
 	tabBarSelectedButtonColor: 'red',
-	tabBarBackgroundColor: 'white',
+	tabBarBackgroundColor: 'black',
 	topBarElevationShadowEnabled: false,
 	navBarHideOnScroll: true,
 	tabBarHidden: true,
@@ -33,24 +33,11 @@ Number.prototype.thousandDot = function () {
     return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
 };
 
-const Style = {
-    flex: 1,
-    paddingTop: Platform.OS === 'ios' ? 20 : 0
-}
-
-// const App = () => (
-//     <Provider store={store}>
-//         <View style={Style}>
-//             <StatusBar hidden />
-
-//         </View>
-//     </Provider>
-// )
 
 Navigation.startSingleScreenApp({
 	screen: {
 		screen: 'AgroSoft.ProductsList',
-		title: 'Movies',
+		title: 'Animales',
 		navigatorStyle,
 		leftButtons: [
 			{
@@ -66,4 +53,3 @@ Navigation.startSingleScreenApp({
 });
 
 
-//export default App
